@@ -1,0 +1,41 @@
+//  Layout
+
+$Mobile-Width: 375px;
+$Desktop-Width: 1366px;
+
+// ## Colors
+
+// ### Primary
+
+$Scissors-Gradient: linear-gradient(white, white) padding-box,
+  linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+
+$Paper-Gradient: linear-gradient(white, white) padding-box,
+  linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+
+$Rock-Gradient: linear-gradient(white, white) padding-box,
+  linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+
+// $Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+// $Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+// ### Neutral
+
+$Dark-Text: hsl(229, 25%, 31%);
+$Score-Text: hsl(229, 64%, 46%);
+$Header-Outline: hsl(217, 16%, 45%);
+
+// ### Background
+
+$RadialGradient: radial-gradient(
+  circle,
+  rgba(42, 51, 82, 1) 0%,
+  rgba(35, 46, 76, 1) 33%,
+  rgba(30, 40, 73, 1) 66%
+);
+$BackgroundGradient: linear-gradient(
+  360deg,
+  rgba(20, 21, 57, 1) 0%,
+  rgba(31, 55, 86, 1) 35%
+);
+
+// ## Fonts
