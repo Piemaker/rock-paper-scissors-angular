@@ -1,17 +1,60 @@
 @import "../../../styles/vars.scss";
 
-.board-container {
-  display: flex;
-  flex-direction: column;
-  border: 4px rgba(146, 146, 146, 0.63) solid;
-  border-radius: 1rem;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.game-board-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.choices-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+.choices-image{
+    max-width: 100%;
+    min-width: 300px;
+    height: 225px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin-bottom: 3rem;
+    transform: rotate(0deg);
+    background-image: url("../../../assets//images/bg-triangle.svg");
+    background-repeat: no-repeat, repeat;
+
 }
 
-@media only screen and (min-width: $Desktop-Width) {
-  .board-container {
-    padding: 1rem 2rem 1rem 2rem;
-    width: 600px;
-    margin: auto;
-  }
+.rules-button{
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 175px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px white solid;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+    
+}
+
+@media only screen and (min-width: 600px) {
+.rules-button{
+    left: 85%;
+
+}
+.choices-container{
+    margin-top: 175px;
+
+}
 }

@@ -1,3 +1,13 @@
-<div class="board-container">
+<div class="game-board-container">
   <app-score></app-score>
+  <div class="choices-container">
+    <div class="choices-image">
+      <app-choices
+        *ngFor="let choice of choices"
+        [name]="choice.name"
+        [img]="choice.img"
+      ></app-choices>
+    </div>
+  </div>
+  <button class="rules-button">Rules</button>
 </div>
