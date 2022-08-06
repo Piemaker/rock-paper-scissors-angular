@@ -1,16 +1,6 @@
 
 @import "../styles/vars.scss";
 
-.background{ 
-    background: $Rock-Gradient;
-    
-  border-radius: 50em;
-  border: 4px solid transparent;}
-
-  .radial{
-    background: $RadialGradient;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-  }
-  
+section{
+    padding: 2rem;
+}

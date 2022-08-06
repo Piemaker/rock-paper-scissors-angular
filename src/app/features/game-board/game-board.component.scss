@@ -1,0 +1,17 @@
+@import "../../../styles/vars.scss";
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  border: 4px rgba(146, 146, 146, 0.63) solid;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+@media only screen and (min-width: $Desktop-Width) {
+  .board-container {
+    padding: 1rem 2rem 1rem 2rem;
+    width: 600px;
+    margin: auto;
+  }
+}
