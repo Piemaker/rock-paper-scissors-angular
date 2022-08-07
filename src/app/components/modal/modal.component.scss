@@ -28,8 +28,7 @@
 // }
 
 .modal {
-  //   display: flex;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fefefe;
@@ -67,14 +66,14 @@
     &__rules-button:hover,
     &__rules-button:focus {
       cursor: pointer;
+      transform: rotate(180deg);
+      transition: all 1s;
     }
   }
 }
 
 @media only screen and (min-width: 600px) {
   .modal {
-    // display: flex;
-    display: none;
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 

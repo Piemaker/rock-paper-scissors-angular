@@ -1,4 +1,4 @@
-<section class="modal">
+<section class="modal" (click)="onCloseModal()">
   <div class="modal__container">
     <h2 class="modal__container__rules-header">rules</h2>
     <div>
@@ -13,6 +13,7 @@
           class="modal__container__rules-button"
           src="../../../assets/images/icon-close.svg"
           alt="close button"
+          (click) = "onCloseModal()"
         />
       </div>
   </div>

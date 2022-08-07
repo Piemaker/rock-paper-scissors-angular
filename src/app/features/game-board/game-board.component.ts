@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-board.component.scss'],
 })
 export class GameBoardComponent implements OnInit {
+  isShowModal: boolean = false;
   choices: Choices[] = [
     {
       name: 'rock',
@@ -23,9 +24,12 @@ export class GameBoardComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit(): void { }
-  
-  toggleModal() {
-    
+  ngOnInit(): void {}
+
+  closeModal():void {
+    this.isShowModal = false;
+  }
+  openModal():void {
+    this.isShowModal = true;
   }
 }
