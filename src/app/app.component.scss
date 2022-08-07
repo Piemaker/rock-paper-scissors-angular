@@ -1,6 +1,8 @@
 @import "../styles/vars.scss";
 section {
-  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%;
+  background: $BackgroundGradient;
 }
 @media only screen and (min-width: 600px) {
   section {

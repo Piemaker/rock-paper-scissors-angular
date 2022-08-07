@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GameBoardComponent } from './features/game-board/game-board.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameBoardComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

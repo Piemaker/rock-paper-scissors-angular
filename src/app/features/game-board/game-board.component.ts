@@ -23,5 +23,9 @@ export class GameBoardComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  
+  toggleModal() {
+    
+  }
 }
