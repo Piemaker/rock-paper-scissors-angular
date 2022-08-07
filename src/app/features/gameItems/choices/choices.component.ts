@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-choices',
@@ -10,9 +10,13 @@ export class ChoicesComponent implements OnInit {
   name: string = '';
   @Input()
   img: string = '';
+  @Output()
+  chooseOption = new EventEmitter();
 
-  constructor() {
+  constructor() {}
+
+  handleClick(value : string) {
+    this.chooseOption.emit(value)
   }
-
   ngOnInit(): void {}
 }

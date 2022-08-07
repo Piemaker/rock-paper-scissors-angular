@@ -1,12 +1,13 @@
 <app-modal (closeModal) = "closeModal()" *ngIf="isShowModal" ></app-modal>
 <div class="game-board-container">
   <app-score></app-score>
-  <div class="choices-container">
+  <div *ngIf="!isChosen" class="choices-container">
     <div class="choices-image">
       <app-choices
         *ngFor="let choice of choices"
         [name]="choice.name"
         [img]="choice.img"
+        (chooseOption) = "onChoice($event)"
       ></app-choices>
     </div>
   </div>

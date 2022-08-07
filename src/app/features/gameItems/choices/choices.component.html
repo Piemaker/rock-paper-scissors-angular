@@ -1,4 +1,8 @@
 <div class="choice-container" [ngClass]="name">
-  <img class="choice-container__image" [src]="img" [alt]="name" />
-
+  <img
+    class="choice-container__image"
+    (click)="handleClick(name)"
+    [src]="img"
+    [alt]="name"
+  />
 </div>

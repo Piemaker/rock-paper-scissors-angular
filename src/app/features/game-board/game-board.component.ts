@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameBoardComponent implements OnInit {
   isShowModal: boolean = false;
+  isChosen: boolean = false;
+  userChoice: string = '';
   choices: Choices[] = [
     {
       name: 'rock',
@@ -26,10 +28,15 @@ export class GameBoardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  closeModal():void {
+  onChoice(choice: string): void {
+    this.isChosen = true;
+    this.userChoice = choice;
+  }
+
+  closeModal(): void {
     this.isShowModal = false;
   }
-  openModal():void {
+  openModal(): void {
     this.isShowModal = true;
   }
 }
