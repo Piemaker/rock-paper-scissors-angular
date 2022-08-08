@@ -18,32 +18,42 @@
   -moz-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-
+  &--xl {
+    width: 125px;
+    height: 125px;
+  }
   &__image {
     width: 50px;
     height: 50px;
+    &--xl {
+      width: 75px;
+      height: 75px;
+    }
   }
 }
 .rock {
   background: $Rock-Gradient;
-  bottom: 0;
-  transform: translate(-50%, 25%);
+  &__abs {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, 25%);
+  }
 }
 .paper {
   background: $Paper-Gradient;
-  top: 0;
-  left: 0;
-  transform: translate(-25%, -50%);
+  &__abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -50%);
+  }
 }
 .scissor {
   background: $Scissors-Gradient;
-  top: 0;
-  right: 0;
-  transform: translate(25%, -50%);
-}
-
-.rock,
-.paper,
-.scissor {
-  position: absolute;
+  &__abs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -50%);
+  }
 }
