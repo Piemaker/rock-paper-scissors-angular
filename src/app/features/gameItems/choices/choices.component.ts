@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { BoardServicesService } from './../../../services/board-services.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-choices',
@@ -12,14 +13,13 @@ export class ChoicesComponent implements OnInit {
   img: string = '';
   @Input()
   absPos: boolean = false;
-  @Output()
-  chooseOption = new EventEmitter();
   @Input()
-  xl: boolean  = false;
-  constructor() {}
+  xl: boolean = false;
+  //* Add private to be able to access the service
+  constructor(private boardService: BoardServicesService) {}
 
   handleClick(value: string) {
-    this.chooseOption.emit(value);
+    this.boardService.setUserChoice(value);
   }
   ngOnInit(): void {}
 }

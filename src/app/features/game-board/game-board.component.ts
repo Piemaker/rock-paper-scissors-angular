@@ -1,3 +1,4 @@
+import { BoardServicesService } from './../../services/board-services.service';
 import { Choices } from './ChoicesInterface';
 import { Component, OnInit } from '@angular/core';
 
@@ -24,14 +25,14 @@ export class GameBoardComponent implements OnInit {
       img: '../../../assets/images/icon-scissors.svg',
     },
   ];
-  constructor() {}
+  //* Just assigning the service value to the local state doesn't trigger a trigger a rerender
+  constructor(private boardService: BoardServicesService) {
+    this.boardService.userChoiceChange.subscribe((value) => {
+      this.userChoice = value;
+    });
+  }
 
   ngOnInit(): void {}
-
-  onChoice(choice: string): void {
-    this.isChosen = true;
-    this.userChoice = choice;
-  }
 
   closeModal(): void {
     this.isShowModal = false;
