@@ -1,3 +1,4 @@
+import { ResultBoardComponent } from './../../components/result-board/result-board.component';
 import { GameBoardComponent } from './game-board.component';
 import { ModalComponent } from './../../components/modal/modal.component';
 import { ChoicesComponent } from './../gameItems/choices/choices.component';
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
     ChoicesComponent,
     ModalComponent,
     GameBoardComponent,
+    ResultBoardComponent
   ],
   imports: [CommonModule],
   exports: [GameBoardComponent],

@@ -9,22 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameBoardComponent implements OnInit {
   isShowModal: boolean = false;
-  isChosen: boolean = false;
   userChoice: string = '';
-  choices: Choices[] = [
-    {
-      name: 'rock',
-      img: '../../../assets/images/icon-rock.svg',
-    },
-    {
-      name: 'paper',
-      img: '../../../assets/images/icon-paper.svg',
-    },
-    {
-      name: 'scissor',
-      img: '../../../assets/images/icon-scissors.svg',
-    },
-  ];
+  choices: Choices[] = [];
   //* Just assigning the service value to the local state doesn't trigger a trigger a rerender
   constructor(private boardService: BoardServicesService) {
     this.boardService.userChoiceChange.subscribe((value) => {
@@ -32,7 +18,9 @@ export class GameBoardComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.choices = this.boardService.choices;
+  }
 
   closeModal(): void {
     this.isShowModal = false;

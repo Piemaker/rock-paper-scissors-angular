@@ -15,6 +15,8 @@ export class ChoicesComponent implements OnInit {
   absPos: boolean = false;
   @Input()
   xl: boolean = false;
+  @Input()
+  isDisabled : boolean = false;
   //* Add private to be able to access the service
   constructor(private boardService: BoardServicesService) {}
 

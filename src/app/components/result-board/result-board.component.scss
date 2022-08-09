@@ -1,0 +1,60 @@
+@import "../../../styles/vars.scss";
+
+.result-board {
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    max-width: 150px;
+    word-wrap: break-word;
+  }
+  &__message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    button {
+      border: none;
+      border-radius: 0.3rem;
+      text-transform: uppercase;
+      background-color: white;
+      width: 200px;
+      height: 40px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $Score-Text;
+        transition: all 0.5s;
+        color: white;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  .result-board {
+    &__choice-container {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+     &__message-container {
+     }
+  }
+}

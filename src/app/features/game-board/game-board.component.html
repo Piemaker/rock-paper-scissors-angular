@@ -11,6 +11,6 @@
       ></app-choices>
     </div>
   </div>
-  <div class="results-container"></div>
+  <app-result-board *ngIf="userChoice" ></app-result-board>
   <button (click)="openModal()" class="rules-button">Rules</button>
 </div>

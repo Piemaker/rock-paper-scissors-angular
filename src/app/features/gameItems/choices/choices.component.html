@@ -6,11 +6,12 @@
     xl ? 'choice-container--xl' : ''
   ]"
 >
-  <img
-    [ngClass]="[xl ? 'choice-container__image--xl' : '']"
-    class="choice-container__image"
-    (click)="handleClick(name)"
-    [src]="img"
-    [alt]="name"
-  />
+  <button (click)="handleClick(name)" [disabled]="isDisabled">
+    <img
+      [ngClass]="[xl ? 'choice-container__image--xl' : '']"
+      class="choice-container__image"
+      [src]="img"
+      [alt]="name"
+    />
+  </button>
 </div>

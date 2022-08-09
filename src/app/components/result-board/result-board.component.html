@@ -1,0 +1,26 @@
+<div class="result-board">
+  <div class="result-board__container">
+    <div class="result-board__choice-container">
+      <app-choices
+        [xl]="true"
+        [name]="userChoiceObj.name"
+        [img]="userChoiceObj.img"
+        [isDisabled]="true"
+      ></app-choices>
+      <h2 class="result-board__header">You Picked</h2>
+    </div>
+    <div class="result-board__choice-container">
+      <app-choices
+        [xl]="true"
+        [name]="computerChoiceObj.name"
+        [img]="computerChoiceObj.img"
+        [isDisabled]="true"
+      ></app-choices>
+      <h2 class="result-board__header">The Computer Picked</h2>
+    </div>
+  </div>
+  <div class="result-board__message-container">
+    <h1>You win</h1>
+    <button (click)="onClick()">play again</button>
+  </div>
+</div>

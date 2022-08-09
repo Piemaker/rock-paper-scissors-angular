@@ -1,6 +1,11 @@
 @import "../../../../styles/vars.scss";
 
 .choice-container {
+  button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
   &:hover {
     box-shadow: inset 5px 5px 10px #000000, inset -5px -5px 10px blue;
     transition: all 0.5s;
