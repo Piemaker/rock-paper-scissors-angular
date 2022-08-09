@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result-board.component.scss'],
 })
 export class ResultBoardComponent implements OnInit {
+  winner: string = '';
   userChoice: string = '';
   userChoiceObj: Choices = {
     name: '',
@@ -26,7 +27,6 @@ export class ResultBoardComponent implements OnInit {
   }
   onClick(): void {
     this.boardService.setUserChoice('');
-    
   }
   ngOnInit(): void {
     this.choices = this.boardService.choices;
@@ -34,5 +34,18 @@ export class ResultBoardComponent implements OnInit {
     this.userChoiceObj = this.choices.filter(
       (x) => x.name === this.userChoice
     )[0];
+    // stall computer choice
+    setTimeout(() => {
+      let cpuChoice = this.boardService.getCPUChoice();
+      this.computerChoiceObj = this.choices.filter(
+        (x) => x.name === cpuChoice
+      )[0];
+      this.winner = this.boardService.getWinnerState(
+        this.userChoice,
+        cpuChoice
+      );
+      this.boardService.handleUserScore(this.winner);
+    }, 1500);
+    // get winner
   }
 }
