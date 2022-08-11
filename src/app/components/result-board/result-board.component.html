@@ -6,6 +6,7 @@
         [name]="userChoiceObj.name"
         [img]="userChoiceObj.img"
         [isDisabled]="true"
+        [isRipple]="winner === 'You Win'"
       ></app-choices>
       <h2 class="result-board__header">You Picked</h2>
     </div>
@@ -15,12 +16,13 @@
         [name]="computerChoiceObj.name"
         [img]="computerChoiceObj.img"
         [isDisabled]="true"
+        [isRipple]="winner === 'Computer Wins'"
       ></app-choices>
       <h2 class="result-board__header">The Computer Picked</h2>
     </div>
   </div>
   <div *ngIf="computerChoiceObj.name" class="result-board__message-container">
-    <h1>{{winner}}</h1>
+    <h1>{{ winner }}</h1>
     <button (click)="onClick()">play again</button>
   </div>
 </div>

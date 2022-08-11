@@ -1,7 +1,7 @@
 @import "../../../../styles/vars.scss";
 
 .choice-container {
-  button{
+  button {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -60,5 +60,17 @@
     top: 0;
     right: 0;
     transform: translate(25%, -50%);
+  }
+}
+
+/* ripple effect */
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(grey, 0.1), 0 0 0 20px rgba(grey, 0.1),
+      0 0 0 40px rgba(grey, 0.1), 0 0 0 60px rgba(grey, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(grey, 0.1), 0 0 0 40px rgba(grey, 0.1),
+      0 0 0 60px rgba(grey, 0.1), 0 0 0 80px rgba(grey, 0);
   }
 }

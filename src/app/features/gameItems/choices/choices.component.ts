@@ -16,12 +16,17 @@ export class ChoicesComponent implements OnInit {
   @Input()
   xl: boolean = false;
   @Input()
-  isDisabled : boolean = false;
+  isDisabled: boolean = false;
+  @Input()
+  isRipple: boolean = false;
   //* Add private to be able to access the service
   constructor(private boardService: BoardServicesService) {}
-
+  
   handleClick(value: string) {
     this.boardService.setUserChoice(value);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("🚀 ~ file: choices.component.ts ~ line 22 ~ ChoicesComponent ~ isRipple", this.isRipple)
+
+  }
 }
