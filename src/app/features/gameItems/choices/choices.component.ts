@@ -21,12 +21,9 @@ export class ChoicesComponent implements OnInit {
   isRipple: boolean = false;
   //* Add private to be able to access the service
   constructor(private boardService: BoardServicesService) {}
-  
+
   handleClick(value: string) {
     this.boardService.setUserChoice(value);
   }
-  ngOnInit(): void {
-    console.log("🚀 ~ file: choices.component.ts ~ line 22 ~ ChoicesComponent ~ isRipple", this.isRipple)
-
-  }
+  ngOnInit(): void {}
 }
