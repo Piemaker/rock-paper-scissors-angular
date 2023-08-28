@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b1c33afe-d37a-480e-aa8d-f2ecbcf97a2d/deploy-status)](https://app.netlify.com/sites/harmonious-pudding-4c6085/deploys)
 # RockPaperScissors
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
